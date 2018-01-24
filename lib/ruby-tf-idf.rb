@@ -97,7 +97,8 @@ module RubyTfIdf
       splitted_docs = []
       docs.each do |d|
         begin
-          splitted_docs << d.downcase!.gsub(/,|\.|\'/,'').split(/\s+/)
+          d.downcase!
+          splitted_docs << d.gsub(/,|\.|\'/,'').split(/\s+/)
         rescue
         end
       end
